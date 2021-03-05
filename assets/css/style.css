@@ -1,8 +1,10 @@
-.home-page {
-    background-color: black;
+.game {
+  font-family: "Courier New", Courier, monospace;
+  color: red;
+  text-align: center;
+  font-size: 60px;
 }
 
-h1 {
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-color:red;
+.home-page {
+  background-color: black;
 }

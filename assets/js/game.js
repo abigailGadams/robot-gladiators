@@ -4,22 +4,34 @@ var playerAttack = 10;
 var playerMoney = 10;
 
 var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
-var enemyHealth = 10;
+var enemyHealth = 50;
 var enemyAttack = 12;
 
+var fight = function() {
+
+};
+
+for (var i = 0; i < enemyNames.length; i++) {
+  fight(enemyNames[i]);
+}
+// fight function statements
 
 // GAME STATES
 // WIN -> Player robot defeats all enemy robots
 //    * Fight all enemy-robots
 //    * Defeat each enemy-robot
+
 // LOSE -> Player robot's health reaches zero or less
 // function to start a new game
 var startGame = function () {
-  for (var i = 0; i < enemyNames.length; i++) {
+  for (var i = 0; i < enemyName.length; i++) {
+    // console.log(enemyName[i]);
+    // console.log(i);
+    // console.log(enemyName[i] + " is at " + i + " index");
     if (playerHealth > 0) {
       window.alert("Welcome to Robot Gladiators! Round " + (i + 1));
 
-      var pickedEnemyName = enemyNames[i];
+      var pickedEnemyName = enemyName[i];
 
       enemyHealth = 50;
 
@@ -41,9 +53,9 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
   console.log(
     playerName +
       " attacked " +
-      enemyNames +
+      enemyName[0] +
       ". " +
-      enemyNames +
+      enemyName[0] +
       " now has " +
       enemyHealth +
       " health remaining."
@@ -53,13 +65,13 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
   if (enemyHealth <= 0) {
     window.alert(enemyNames + " has died!");
   } else {
-    window.alert(enemyNames + " still has " + enemyHealth + " health left.");
+    window.alert(enemyName + " still has " + enemyHealth + " health left.");
   }
 
   // remove player's health by subtracting the amount set in the enemyAttack variable
   playerHealth = playerHealth - enemyAttack;
   console.log(
-    enemyName +
+    enemyName[0] +
       " attacked " +
       playerName +
       ". " +

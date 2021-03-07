@@ -4,10 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Robot Gladiators!</title>
   </head>
-  <body>
-    
+  <body class="home-page">
+    <h1 class="game">Robot Gladiators</h1>
+    <section></section>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        var move = 0;
+        setInterval(function () {
+          move += 1;
+          $("section").css("background-position", move + "px");
+        }, 20);
+      });
+    </script>
     <script src="./assets/js/game.js"></script>
   </body>
 </html>
